@@ -1,0 +1,141 @@
+body {
+    background: mediumseagreen;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.navbar-brand {
+    color: rgb(110, 234, 34);
+    text-decoration: none;
+    font-size: 24px;
+    font-family: 'Brush Script MT', cursive; /* Example of a styled font */
+    transition: transform 0.3s;
+}
+
+.navbar-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.nav-item {
+    margin-left: 20px;
+}
+
+.nav-link {
+    color: rgb(240, 10, 10);
+    text-decoration: none;
+    font-size: 18px;
+    transition: transform 0.3s;
+}
+
+.nav-link:hover, .nav-link.active {
+    transform: scale(1.1);
+}
+
+.nav-link.disabled {
+    color: gray;
+}
+
+.container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    margin: 20px auto;
+    max-width: 800px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: mediumseagreen;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.form-group {
+    flex: 1 1 30%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    padding: 0 10px;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.form-group.text-center {
+    flex: 1 1 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.submit-button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: darkgreen;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.submit-button:hover {
+    transform: scale(1.1);
+}
+
+.card {
+    background-color: #4CAF50;
+    color: white;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 300px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-img {
+    border-radius: 10px;
+    max-width: 100%;
+}
+
+.card-body {
+    padding: 10px 0;
+}
+
+.card-title {
+    margin: 10px 0;
+}
+
+.card-text {
+    font-size: 18px;
+}
