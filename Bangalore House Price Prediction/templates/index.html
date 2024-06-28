@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>BANGALORE HOUSE PRICE PREDICTION</title>
+        <link rel="stylesheet" href="static/styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+    </head>
+    <body class="bg-dark">
+        <!-- Navigation Bar -->
+        <nav class="navbar">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Bangalore House</a>
+                <div class="navbar-nav">
+                    <a class="nav-link active" href="#">Home</a>
+                    <a class="nav-link" href="#">Contact</a>
+                    <a class="nav-link" href="#">About</a>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container">
+            <div class="row">
+                <div class='card'>
+                    <div class="card-header">
+                        <h1>BANGALORE HOUSE PRICE PREDICTION</h1>
+                    </div>
+                    <div class="card-body">
+                        <form action="{{ url_for('index') }}" method="POST">
+                            <div class="row">
+                                <div class="form-group">
+                                    <label>LOCATION</label>
+                                    <select class="form-control" name="sLocation" id="uiLocation" required>
+                                        {% for location in locations %}
+                                        <option value="{{ location }}">{{ location }}</option>
+                                        {% endfor %}
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>BHK</label>
+                                    <input type="number" class='form-control' id="uiBHK" name="uiBHK" placeholder="Enter BHK">
+                                </div>
+                                <div class="form-group">
+                                    <label>AREA</label>
+                                    <input type="number" class='form-control' id="uiSqft" name="Squareft" placeholder="Enter Area (sqft)" min="1000" max="50000">
+                                </div>
+                                <div class="form-group">
+                                    <label>BATHROOMS</label>
+                                    <input type="number" class='form-control' id="uiBathrooms" name="uiBathrooms" placeholder="Enter Bathrooms">
+                                </div>
+                                <div class="form-group">
+                                    <button class="btn-primary" type="submit">ESTIMATE PRICE</button>
+                                </div>
+                            </div>
+                        </form>
+                        {% if result %}
+                        <div class="result">
+                            <h2>ESTIMATED PRICE:</h2>
+                            <h3><span>{{ result }}</span></h3>
+                        </div>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
